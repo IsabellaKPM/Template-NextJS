@@ -3,15 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "prepare": "husky",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --fix",
+    "start:dev": "next dev",
     "format": "prettier --write \"{src,tests}/**/*.{ts,tsx,md,json}\" \"*.{ts,js,json,mjs}\"",
-    "prepare": "husky",
+    "format:check": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint": "eslint \"{src,test}/**/*.ts\"",
+    "lint:fix": "eslint \"{src,test}/**/*.ts\" --fix",
+    "typecheck": "tsc --noEmit",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "test:e2e:report": "playwright show-report"
+    "test:e2e:report": "playwright show-report",
+    "ci:check": "yarn lint && yarn typecheck"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.101.2",
@@ -35,6 +39,8 @@
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-unused-imports": "^4.4.1",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
     "prettier": "^3.9.4",
