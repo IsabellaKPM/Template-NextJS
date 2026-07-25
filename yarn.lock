@@ -3282,7 +3282,7 @@ __metadata:
     lint-staged: "npm:^17.0.8"
     next: "npm:16.2.10"
     prettier: "npm:^3.9.6"
-    react: "npm:19.2.4"
+    react: "npm:19.2.8"
     react-dom: "npm:19.2.8"
     tailwind-merge: "npm:^3.6.0"
     tailwindcss: "npm:^4"
@@ -5079,10 +5079,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.2.4":
-  version: 19.2.4
-  resolution: "react@npm:19.2.4"
-  checksum: 10c0/cd2c9ff67a720799cc3b38a516009986f7fc4cb8d3e15716c6211cf098d1357ee3e348ab05ad0600042bbb0fd888530ba92e329198c92eafa0994f5213396596
+"react@npm:19.2.8":
+  version: 19.2.8
+  resolution: "react@npm:19.2.8"
+  checksum: 10c0/5f86bdb56426652fd6d989d30a6f2e603c057272c47c9ca3a3fbe190a3a39ee9ccce937d63cfc039717abed1b8891d6a499134bc35311acc07eafdacd86537cd
   languageName: node
   linkType: hard
 
