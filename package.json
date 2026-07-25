@@ -40,9 +40,9 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@commitlint/cli": "19.5.0",
-    "@commitlint/config-conventional": "19.5.0",
-    "@commitlint/cz-commitlint": "19.5.0",
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/cz-commitlint": "^21.2.0",
     "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4",
     "@tanstack/react-query-devtools": "^5.101.2",
@@ -58,7 +58,6 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-unused-imports": "^4.4.1",
     "husky": "^9.1.7",
-    "inquirer": "^9.0.0",
     "lint-staged": "^17.0.8",
     "prettier": "^3.9.6",
     "tailwindcss": "^4",
