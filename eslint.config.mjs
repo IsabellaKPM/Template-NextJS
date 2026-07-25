@@ -4,11 +4,24 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import prettierPlugin from "eslint-plugin-prettier";
 import unusedImports from "eslint-plugin-unused-imports";
 import tseslint from "typescript-eslint";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
   ...nextVitals,
   ...nextTs,
+
+  {
+    settings: {
+      react: {
+        version: "19.2.8",
+      },
+    },
+  },
 
   {
     ignores: [
@@ -56,6 +69,19 @@ const eslintConfig = [
       ],
 
       "@typescript-eslint/no-explicit-any": "off",
+    },
+  },
+
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: true,
+        tsconfigRootDir: __dirname,
+      },
+    },
+    rules: {
       "@typescript-eslint/no-floating-promises": "warn",
       "@typescript-eslint/no-unsafe-argument": "error",
       "@typescript-eslint/no-unsafe-member-access": "error",
