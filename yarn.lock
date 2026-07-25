@@ -1245,12 +1245,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20":
-  version: 20.19.43
-  resolution: "@types/node@npm:20.19.43"
+"@types/node@npm:^26":
+  version: 26.1.1
+  resolution: "@types/node@npm:26.1.1"
   dependencies:
-    undici-types: "npm:~6.21.0"
-  checksum: c959b5d256b073da95aa1892acb071b487c2f652f98b2cb75e92657d51b99bd691aa811023fb13acd6752bc1bcb75dc579db02190a4da70926cf6f372011bc4e
+    undici-types: ~8.3.0
+  checksum: c6727bd4761280b389a2706cc55cbb3511f37f3e2aa609dda65590e1aec5690ce3b14a865edd070c97c5ae4f566dbbae1a811c1b61f69efaee4226015205f304
   languageName: node
   linkType: hard
 
@@ -4483,7 +4483,7 @@ __metadata:
     "@tailwindcss/postcss": ^4
     "@tanstack/react-query": ^5.101.2
     "@tanstack/react-query-devtools": ^5.101.2
-    "@types/node": ^20
+    "@types/node": ^26
     "@types/react": ^19
     "@types/react-dom": ^19
     axios: ^1.18.1
@@ -5317,10 +5317,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici-types@npm:~6.21.0":
-  version: 6.21.0
-  resolution: "undici-types@npm:6.21.0"
-  checksum: 46331c7d6016bf85b3e8f20c159d62f5ae471aba1eb3dc52fff35a0259d58dcc7d592d4cc4f00c5f9243fa738a11cfa48bd20203040d4a9e6bc25e807fab7ab3
+"undici-types@npm:~8.3.0":
+  version: 8.3.0
+  resolution: "undici-types@npm:8.3.0"
+  checksum: bdc1d54d8b48f3f2a801f7707a2ad53b76711039dd9a276382d4bdbbded79355574309425096127a42313731bde7a76cc299855fc06872797edd0acbfcef5bc0
   languageName: node
   linkType: hard
 
