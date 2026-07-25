@@ -21,7 +21,7 @@ jobs:
         node-version: lts/*
 
     - name: Install dependencies
-      run: npm install -g yarn && yarn
+      run: corepack enable && yarn install
 
     - name: Install Playwright Browsers
       run: yarn playwright install --with-deps
