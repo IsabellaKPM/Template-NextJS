@@ -1,33 +1,24 @@
-import {
-  RuleConfigCondition,
-  RuleConfigSeverity,
-  TargetCaseType,
-} from "@commitlint/types";
-
+/** @type {import("@commitlint/types").UserConfig} */
 export default {
   parserPreset: "conventional-changelog-conventionalcommits",
   rules: {
-    "body-leading-blank": [RuleConfigSeverity.Warning, "always"] as const,
-    "body-max-line-length": [RuleConfigSeverity.Error, "always", 100] as const,
-    "footer-leading-blank": [RuleConfigSeverity.Warning, "always"] as const,
-    "footer-max-line-length": [
-      RuleConfigSeverity.Error,
-      "always",
-      100,
-    ] as const,
-    "header-max-length": [RuleConfigSeverity.Error, "always", 100] as const,
-    "header-trim": [RuleConfigSeverity.Error, "always"] as const,
+    "body-leading-blank": [1, "always"],
+    "body-max-line-length": [2, "always", 100],
+    "footer-leading-blank": [1, "always"],
+    "footer-max-line-length": [2, "always", 100],
+    "header-max-length": [2, "always", 100],
+    "header-trim": [2, "always"],
     "subject-case": [
-      RuleConfigSeverity.Error,
+      2,
       "never",
       ["sentence-case", "start-case", "pascal-case", "upper-case"],
-    ] as [RuleConfigSeverity, RuleConfigCondition, TargetCaseType[]],
-    "subject-empty": [RuleConfigSeverity.Error, "never"] as const,
-    "subject-full-stop": [RuleConfigSeverity.Error, "never", "."] as const,
-    "type-case": [RuleConfigSeverity.Error, "always", "lower-case"] as const,
-    "type-empty": [RuleConfigSeverity.Error, "never"] as const,
+    ],
+    "subject-empty": [2, "never"],
+    "subject-full-stop": [2, "never", "."],
+    "type-case": [2, "always", "lower-case"],
+    "type-empty": [2, "never"],
     "type-enum": [
-      RuleConfigSeverity.Error,
+      2,
       "always",
       [
         "build",
@@ -42,7 +33,7 @@ export default {
         "style",
         "test",
       ],
-    ] as [RuleConfigSeverity, RuleConfigCondition, string[]],
+    ],
   },
   prompt: {
     questions: {
@@ -139,7 +130,7 @@ export default {
           "If issues are closed, the commit requires a body. Please enter a longer description of the commit itself",
       },
       issues: {
-        description: 'Add issue references (e.g. "fix #123", "re #123".)',
+        description: "Add issue references (e.g. \"fix #123\", \"re #123\").",
       },
     },
   },
