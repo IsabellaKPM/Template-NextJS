@@ -4134,7 +4134,7 @@ __metadata:
     prettier: "npm:^3.9.6"
     react: "npm:19.2.8"
     react-dom: "npm:19.2.8"
-    shadcn: "npm:^4.14.1"
+    shadcn: "npm:^4.16.0"
     tailwind-merge: "npm:^3.6.0"
     tailwindcss: "npm:^4"
     tw-animate-css: "npm:^1.4.0"
@@ -6880,9 +6880,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shadcn@npm:^4.14.1":
-  version: 4.14.1
-  resolution: "shadcn@npm:4.14.1"
+"shadcn@npm:^4.16.0":
+  version: 4.16.0
+  resolution: "shadcn@npm:4.16.0"
   dependencies:
     "@babel/core": "npm:^7.28.0"
     "@babel/parser": "npm:^7.28.0"
@@ -6918,7 +6918,7 @@ __metadata:
     zod-to-json-schema: "npm:^3.24.6"
   bin:
     shadcn: dist/index.js
-  checksum: 10c0/7ffaf68bc63b725522c3d2fad0be8b5751491f187d8d9754878d8083269b4a4c0d11aa9123954dfbeff722a6c63e4f53513e540df463ef9d75d064b827ad378e
+  checksum: 10c0/2211e0179b938fc2a5b1701d762b2dc242232773feb70f8b0feb2f9fe4f71402e4fd8b4ae9168aaeec56d494504f43d7e45643ade814b5efc30bae083f7e9c78
   languageName: node
   linkType: hard
 
