@@ -1,6 +1,9 @@
 {
   "name": "frontend",
+  "description": "Next.js Template",
   "version": "0.1.0",
+  "author": "IsabellaKPM",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "commit": "cz",
