@@ -12,7 +12,7 @@ test.describe("Home Page", () => {
 
     const mainTitle = page.locator("h1");
     await expect(mainTitle).toContainText(
-      "Template Next.js con Tailwind CSS y TypeScript",
+      "Template Next.js with Tailwind CSS and TypeScript",
     );
 
     const currentYear = new Date().getFullYear().toString();
