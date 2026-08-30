@@ -10,7 +10,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  e2e-tests:
+    uses: ./.github/workflows/playwright.yml
+
   release:
+    needs: e2e-tests
     runs-on: ubuntu-latest
 
     permissions:
@@ -29,16 +33,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Restore Jest Cache
-        uses: actions/cache@v6
-        with:
-          path: .jest-cache
-          key: ${{ runner.os }}-jest-${{ hashFiles('**/*.ts') }}
-          restore-keys: |
-            ${{ runner.os }}-jest-
-
-      - name: Run Lint and Tests (Unit + Integration)
-        run: yarn ci
+      - name: Run Lint
+        run: yarn ci:check
 
       - name: Extract version from tag
         id: tag

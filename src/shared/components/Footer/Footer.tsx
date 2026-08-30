@@ -1,5 +1,3 @@
-import { HeartIcon } from "lucide-react";
-
 export default function Footer() {
   return (
     <footer className="border-t border-border bg-muted/40">
