@@ -33,25 +33,19 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es"
+      lang="en"
       suppressHydrationWarning
-      className={ 
-        cn(
-          "h-full",
-          "antialiased",
-          geistSans.variable,
-          geistMono.variable,
-          "font-sans",
-          inter.variable
-        )
-      }
+      className={cn(
+        "h-full",
+        "antialiased",
+        geistSans.variable,
+        geistMono.variable,
+        "font-sans",
+        inter.variable,
+      )}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <Header />
-        <Providers>
-          <div className="flex-1">{children}</div>
-        </Providers>
-        <Footer />
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
