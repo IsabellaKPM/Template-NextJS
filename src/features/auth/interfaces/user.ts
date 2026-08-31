@@ -1,5 +1,5 @@
-import { UserRoles } from "../enums/userRoles.enum";
-import { UserStatus } from "../enums/userStatus.enum";
+import { UserRoles } from "../enums/userRoles";
+import { UserStatus } from "../enums/userStatus";
 
 export interface User {
   id: string;

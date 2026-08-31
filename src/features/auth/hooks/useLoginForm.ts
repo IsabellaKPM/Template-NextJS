@@ -3,7 +3,7 @@
 import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
-import { loginSchema, type LoginFormValues } from "../schemas/login.schema";
+import { loginSchema, type LoginFormValues } from "../schemas/loginSchema";
 import { useLoginMutation } from "./useLoginMutation";
 import { ROUTES } from "@/shared/lib/routes";
 
@@ -45,7 +45,7 @@ export function useLoginForm() {
   };
 
   return {
-    form,
+    control: form.control,
     loginType,
     handleLoginTypeChange,
     handleSubmit: form.handleSubmit(onSubmit),

@@ -2,9 +2,9 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import { cn } from "@/shared/lib/tailwind";
+import Providers from "@/shared/components/Providers/Providers";
 import Header from "@/shared/components/Header/Header";
 import Footer from "@/shared/components/Footer/Footer";
-import Providers from "@/shared/components/Providers/Providers";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,7 +45,11 @@ export default function RootLayout({
       )}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
-        <Providers>{children}</Providers>
+        <Providers>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

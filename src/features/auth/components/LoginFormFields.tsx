@@ -1,11 +1,17 @@
 "use client";
 
-import { Controller } from "react-hook-form";
+import { Control, Controller } from "react-hook-form";
 import { Button } from "@/shared/components/ui/button";
 import { Input } from "@/shared/components/ui/input";
 import { Tabs, TabsList, TabsTrigger } from "@/shared/components/ui/tabs";
 import { Field, FieldLabel, FieldError } from "@/shared/components/ui/field";
-import { LoginFormFieldsProps } from "../types";
+import { LoginFormValues } from "../schemas/loginSchema";
+
+export interface LoginFormFieldsProps {
+  control: Control<LoginFormValues>;
+  loginType: "email" | "username";
+  onLoginTypeChange: (type: "email" | "username") => void;
+}
 
 export function LoginFormFields({
   control,
@@ -14,7 +20,6 @@ export function LoginFormFields({
 }: LoginFormFieldsProps) {
   return (
     <>
-      {/* Login Type Selector */}
       <Controller
         name="loginType"
         control={control}
@@ -36,7 +41,6 @@ export function LoginFormFields({
         )}
       />
 
-      {/* Identifier Field */}
       <Controller
         name="identifier"
         control={control}
@@ -59,7 +63,6 @@ export function LoginFormFields({
         )}
       />
 
-      {/* Password Field */}
       <Controller
         name="password"
         control={control}

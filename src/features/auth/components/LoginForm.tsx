@@ -11,7 +11,7 @@ import {
 } from "@/shared/components/ui/card";
 
 export function LoginForm() {
-  const { form, loginType, handleLoginTypeChange, handleSubmit } =
+  const { control, loginType, handleLoginTypeChange, handleSubmit } =
     useLoginForm();
 
   return (
@@ -27,7 +27,7 @@ export function LoginForm() {
       <CardContent>
         <form onSubmit={handleSubmit} className="space-y-4">
           <LoginFormFields
-            control={form.control}
+            control={control}
             loginType={loginType}
             onLoginTypeChange={handleLoginTypeChange}
           />

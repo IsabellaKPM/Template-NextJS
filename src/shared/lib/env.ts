@@ -1,4 +1,4 @@
-import { envSchema } from "@/shared/schemas/env.schema";
+import { envSchema } from "@/shared/schemas/envSchema";
 
 const createEnv = () => {
   const result = envSchema.safeParse({

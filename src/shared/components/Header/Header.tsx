@@ -6,7 +6,7 @@ export default function Header() {
     <header className="border-b border-border bg-background">
       <div className="container mx-auto flex h-16 items-center justify-between">
         <Link href={ROUTES.home} className="text-xl font-bold tracking-tight">
-          GB
+          Template Next.js
         </Link>
 
         <nav className="flex items-center gap-6 text-sm font-medium">

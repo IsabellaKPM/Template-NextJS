@@ -1,4 +1,10 @@
-import { Button } from "@/shared/components/ui/button";
+import { buttonVariants } from "@/shared/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+} from "@/shared/components/ui/dialog";
+import { LoginForm } from "@/features/auth/components/LoginForm";
 
 export default function Home() {
   return (
@@ -15,7 +21,14 @@ export default function Home() {
           for use in the application.
         </p>
 
-        <Button size="lg">Click me</Button>
+        <Dialog>
+          <DialogTrigger className={buttonVariants({ size: "lg" })}>
+            Login
+          </DialogTrigger>
+          <DialogContent className="p-0 border-none bg-transparent shadow-none max-w-md">
+            <LoginForm />
+          </DialogContent>
+        </Dialog>
       </div>
     </main>
   );
