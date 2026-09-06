@@ -1,4 +1,4 @@
-import { group } from "@/shared/lib/apiBuilder";
+import { group } from "@/shared/lib/groupRoute";
 
 const API_PREFIX = "/api";
 const ADMIN_PREFIX = "/admin";

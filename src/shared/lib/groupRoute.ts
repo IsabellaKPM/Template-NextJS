@@ -1,12 +1,12 @@
 export type RouteTree = {
-  [key: string]: string | RouteTree | ((...args: any[]) => string);
+  [key: string]: string | RouteTree | ((...args: never[]) => string);
 };
 
 export function group<T extends RouteTree>(
   prefix: string,
   routes: T,
 ): T & { base: string } {
-  const result = { base: prefix } as any;
+  const result: Record<string, unknown> = { base: prefix };
 
   for (const key in routes) {
     const item = routes[key];
@@ -14,11 +14,12 @@ export function group<T extends RouteTree>(
     if (typeof item === "string") {
       result[key] = `${prefix}${item}`;
     } else if (typeof item === "function") {
-      result[key] = (...args: any[]) => `${prefix}${item(...args)}`;
+      const fn = item as (...args: never[]) => string;
+      result[key] = (...args: never[]) => `${prefix}${fn(...args)}`;
     } else if (typeof item === "object" && item !== null) {
-      result[key] = group(`${prefix}`, item as RouteTree);
+      result[key] = group(prefix, item as RouteTree);
     }
   }
 
-  return result;
+  return result as T & { base: string };
 }

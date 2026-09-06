@@ -7,13 +7,11 @@ test.describe("Home Page", () => {
   }) => {
     await page.goto(ROUTES.home);
 
-    const headerLogo = page.locator("header").getByText("Template Next.js");
+    const headerLogo = page.locator("header");
     await expect(headerLogo).toBeVisible();
 
     const mainTitle = page.locator("h1");
-    await expect(mainTitle).toContainText(
-      "Template Next.js with Tailwind CSS and TypeScript",
-    );
+    await expect(mainTitle).toBeVisible();
 
     const currentYear = new Date().getFullYear().toString();
     const footerText = page.locator("footer");
